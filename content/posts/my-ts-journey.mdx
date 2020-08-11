@@ -1,0 +1,77 @@
+---
+title: "My TypeScript Journey"
+date: 2020-04-20
+image: 'https://images.unsplash.com/photo-1517694712202-14dd9538aa97?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2100&q=80'
+imageAlt: Laptop on a desk with VS Code open.
+---
+
+For the longest time in my early development years I had zero interest in adopting TypeScript. As a long time JavaScript advocate, the idea of muddying up my beautiful methods with things like
+
+```typescript
+type SomeObject = {
+  id: number;
+  data: DataType;
+  option?: string
+  method: (e: EventType) => void;
+}
+
+function handleSomeObject(myObject: SomeObject): SomeValue {
+  ...
+}
+```
+
+was absolutely apocryphical to a young developer. I was set with my JSDoc and PropTypes. I didn't need all of that extra nonsense. I had it made in the shade.
+
+```javascript
+/**
+ *
+ * @param myObject
+ * @param { number } myObject.id
+ * @param { ... } myObject.data
+ * @param { string } myObject.option
+ * @param { Function } myObject.method
+ * @returns { Array } - [...]
+ */
+
+function handleSomeObject(myObject) {
+  ...
+}
+
+PropTypes.handleSomeObject = {
+  id: propTypes.number.isRequired,
+  data: propTypes.shape({
+    some: propTypes.string.isRequired,
+    values: propTypes.shape({
+      here: propTypes.string.isRequired,
+    }).isRequired,
+  }).isRequired,
+  option: propTypes.string,
+  method: propTypes.func.isRequired
+}
+```
+
+"Aaah yes," I told myself as I debugged a runtime error wherein I forgot to set some default property in defaultProps, and another error about some data not actually being a string and not a number, "this is truly the superior way to enforce types. And look how simple it is to read."
+
+This mindset was exacerbated by my first ever lead developer bashing TypeScript every time he had the chance. "Why would you take away the dynamism that makes JavaScript so 'great'," he would ask. "It flies in the face of human-centric design."
+
+"Aaah, yes, indeed it does," I responded enthusiastically as I searched StackOverflow for a way to coerce unruly types. (This is not a hit piece, by the way. That tech lead is incredibly capable and we still collaborate on projects in our spare time.)
+
+About a year later the time came for me to move to a new position. A few rounds of interviews and an offer later, I packed up and moved across the country. This new gig had everything I wanted. That is until my first day when I looked at their codebase and saw . . . **_gasp_** . . . .tsx files! My heart sank. This was it for me. My years of learning, studying, and mastering the chaotic beauty that is JavaScript might as well be in the toilet.
+
+I went through the codebase. "Look how they massacred my boy," I lamented privately.
+
+I grew frustrated. I was confused. I was afraid.
+
+I read documentation. Watched tutorials. None of the resources available to me helped things "click". Why did Microsoft have to do this? Why did people on the forums all seem to praise this evil superset? Why were more and more libraries adopting this monstrosity I was so afraid of? Why was I so afraid?
+
+---
+
+I don't know what exactly finally made it click. I think part of my issue is that so many of the forums and tutorials assumed some knowledge of typed systems, which, coming exclusively from a loosely typed background, I hadn't the foggiest idea about. It wasn't practical, in my mind. I was getting in my own way, and the only thing I could do was adopt this new paradigm head on.
+
+So I did.
+
+I rejected the `any` keyword. If I was going to do this, I was going to go HARD. I looked at the types that had been written by my predecessor. I looked at it practically and intentionally. While his code wasn't perfect, his types were largely spot on. This was my learning ground.
+
+Fast forward through a couple months of grim determination to understand the intricacies, benefits, and pitfalls of TypeScript (and strongly typed languages at large), and I now feel I can't go back to vanilla JavaScript. Subconsciously, I feel dependent on strong types. I can't abide runtime errors anymore. I have no patience for the `any` keyword. Give me that sweet, sweet autosuggest and autocomplete functionality. Let the security of type inference wash over me as I no longer have to guess and hope that my software will break from some unknown exception. That I think, is the greatest, but hardest to directly pinpoint, benefit of TypeScript. It naturally reduces bugs. It's a phenomenon developers can only understand when they really get into the weeds and type (get it?) their code.
+
+TypeScript has made me think about and deeply consider my code before I write it. It has challenged me to write and structure my code so that it is far less to silly bugs and human error. They still exist, of course, but I am nonetheless much more confident in the software I ship as a result of learning and adopting TypeScript.
