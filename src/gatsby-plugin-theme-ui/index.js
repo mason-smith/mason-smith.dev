@@ -8,12 +8,6 @@ export default {
     primary: "#ffa7c4",
     secondary: "#cc859c",
   },
-  fonts: {
-    ...dark.fonts,
-    // body:
-    //   'system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", sans-serif',
-    // heading: "Georgia, sans-serif",
-  },
   styles: {
     ...dark.styles,
     code: {
