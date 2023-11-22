@@ -1,9 +1,10 @@
 import { type ReactNode } from 'react';
 import { Inter } from 'next/font/google';
 
+// project dependencies
+import { ThemeProvider } from '@masonsmith/components';
 // local dependencies
 import './global.css';
-import { ThemeProvider } from './theme-provider';
 
 export const metadata = {
   title: 'Home | Mason Smith',

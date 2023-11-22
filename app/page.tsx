@@ -1,6 +1,11 @@
+import { ThemeToggle } from '@masonsmith/components';
+
 export default async function Index() {
   return (
     <main className="p-4 lg:container lg:mx-auto">
+      <div className="flex justify-end">
+        <ThemeToggle />
+      </div>
       <h1 className="mt-14 text-4xl font-bold tracking-tight">Mason Smith</h1>
       <article className="text-sm">
         <p className="mt-4">
