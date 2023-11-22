@@ -1,4 +1,5 @@
 import { type ReactNode } from 'react';
+import { Inter } from 'next/font/google';
 
 // local dependencies
 import './global.css';
@@ -37,9 +38,14 @@ export const viewport = {
   maximumScale: 1,
 };
 
+const inter = Inter({
+  subsets: ['latin'],
+  display: 'swap',
+});
+
 export default function RootLayout({ children }: { children: ReactNode }) {
   return (
-    <html lang="en">
+    <html lang="en" className={`${inter.className} antialiased`}>
       <body>{children}</body>
     </html>
   );
