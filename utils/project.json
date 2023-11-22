@@ -1,5 +1,5 @@
 {
-  "name": "util",
+  "name": "utils",
   "$schema": "../node_modules/nx/schemas/project-schema.json",
   "sourceRoot": "utils/src",
   "projectType": "library",

@@ -15,8 +15,8 @@
     "skipDefaultLibCheck": true,
     "baseUrl": ".",
     "paths": {
-      "@masonsmith/components": ["components/src/index.ts"],
-      "@masonsmith/util": ["utils/src/index.ts"]
+      "@masonsmith/components": ["components/src"],
+      "@masonsmith/utils": ["utils/src"]
     }
   },
   "exclude": [
