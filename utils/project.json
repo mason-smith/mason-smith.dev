@@ -1,24 +1,24 @@
 {
   "name": "util",
   "$schema": "../node_modules/nx/schemas/project-schema.json",
-  "sourceRoot": "util/src",
+  "sourceRoot": "utils/src",
   "projectType": "library",
   "targets": {
     "build": {
       "executor": "@nx/js:tsc",
       "outputs": ["{options.outputPath}"],
       "options": {
-        "outputPath": "dist/util",
-        "main": "util/src/index.ts",
-        "tsConfig": "util/tsconfig.lib.json",
-        "assets": ["util/*.md"]
+        "outputPath": "dist/utils",
+        "main": "utils/src/index.ts",
+        "tsConfig": "utils/tsconfig.lib.json",
+        "assets": ["utils/*.md"]
       }
     },
     "lint": {
       "executor": "@nx/eslint:lint",
       "outputs": ["{options.outputFile}"],
       "options": {
-        "lintFilePatterns": ["util/**/*.ts", "util/package.json"]
+        "lintFilePatterns": ["utils/**/*.ts", "utils/package.json"]
       }
     },
     "test": {
@@ -26,7 +26,7 @@
       "outputs": ["{options.reportsDirectory}"],
       "options": {
         "passWithNoTests": true,
-        "reportsDirectory": "../coverage/util"
+        "reportsDirectory": "../coverage/utils"
       }
     }
   },

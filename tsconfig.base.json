@@ -16,7 +16,7 @@
     "baseUrl": ".",
     "paths": {
       "@masonsmith/components": ["components/src/index.ts"],
-      "@masonsmith/util": ["util/src/index.ts"]
+      "@masonsmith/util": ["utils/src/index.ts"]
     }
   },
   "exclude": [
