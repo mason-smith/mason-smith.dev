@@ -35,7 +35,8 @@ export default async function About() {
         <p className="mt-4">
           When I am not working, I enjoy spending time with my family, playing video games, and learning new things. I
           have recently begun putting considerable time into my health and physical fitness, training six days a week to
-          compete in powerlifting and reach my highest potential.
+          compete in powerlifting and reach my highest potential. But I am getting old and tired, so maybe I will settle
+          for just being healthy and strong :)
         </p>
       </section>
     </main>
