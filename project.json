@@ -1,5 +1,5 @@
 {
-  "name": "ms",
+  "name": "masonsmith",
   "$schema": "node_modules/nx/schemas/project-schema.json",
   "sourceRoot": ".",
   "projectType": "application",
@@ -9,7 +9,7 @@
       "outputs": ["{options.outputPath}"],
       "defaultConfiguration": "production",
       "options": {
-        "outputPath": "dist/ms"
+        "outputPath": "dist/masonsmith"
       },
       "configurations": {
         "development": {
@@ -22,16 +22,17 @@
       "executor": "@nx/next:server",
       "defaultConfiguration": "development",
       "options": {
-        "buildTarget": "ms:build",
-        "dev": true
+        "buildTarget": "masonsmith:build",
+        "dev": true,
+        "port": 8080
       },
       "configurations": {
         "development": {
-          "buildTarget": "ms:build:development",
+          "buildTarget": "masonsmith:build:development",
           "dev": true
         },
         "production": {
-          "buildTarget": "ms:build:production",
+          "buildTarget": "masonsmith:build:production",
           "dev": false
         }
       }
@@ -39,7 +40,7 @@
     "export": {
       "executor": "@nx/next:export",
       "options": {
-        "buildTarget": "ms:build:production"
+        "buildTarget": "masonsmith:build:production"
       }
     },
     "test": {
