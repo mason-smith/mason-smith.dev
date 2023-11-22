@@ -6,7 +6,12 @@
     "start": "nx serve",
     "build": "nx build",
     "test": "nx test",
-    "prepare": "husky install"
+    "test:e2e": "npx nx run e2e:e2e",
+    "lint": "npx nx run-many --target=lint",
+    "format": "npx nx format:write --all",
+    "validate:full": "run-s lint format test build test:e2e",
+    "validate:commit": "run-s lint format",
+    "prepare": "npx husky install"
   },
   "private": true,
   "dependencies": {
