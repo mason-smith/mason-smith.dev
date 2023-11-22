@@ -3,6 +3,7 @@ import { Inter } from 'next/font/google';
 
 // local dependencies
 import './global.css';
+import { ThemeProvider } from './theme-provider';
 
 export const metadata = {
   title: 'Home | Mason Smith',
@@ -45,8 +46,12 @@ const inter = Inter({
 
 export default function RootLayout({ children }: { children: ReactNode }) {
   return (
-    <html lang="en" className={`${inter.className} antialiased`}>
-      <body>{children}</body>
+    <html lang="en" className={`${inter.className} antialiased`} suppressHydrationWarning>
+      <body>
+        <ThemeProvider attribute="class" defaultTheme="system" enableSystem disableTransitionOnChange>
+          {children}
+        </ThemeProvider>
+      </body>
     </html>
   );
 }
