@@ -17,9 +17,15 @@ export default async function About() {
 
         <p className="mt-4">
           In 2018, I had burned myself out as an independent contractor and was looking for a change. I moved around the
-          country a bit and eventually landed in Boston, MA where I was hired as a senior engineer at Bamboo Rose. I
-          have been working there ever since, and have been promoted to technical lead engineer. I skipped over quite a
-          bit in between, so feel free to check out my{' '}
+          country a bit and eventually landed in Colorado where I was hired as a senior engineer at BackbonePLM. They
+          were acquired by Bamboo Rose in March 2023. I have been working nomadically between Seattle, WA and
+          Louisville, KY ever since, and have been promoted to technical lead engineer. I pride myself on my leadership
+          skills and ability to mentor junior engineers and create pshycologically safe environments for my team to
+          excel both professionally and interpersonally.
+        </p>
+
+        <p className="mt-4">
+          I skipped over quite a bit in between my humble beginnings and now, so feel free to check out my{' '}
           <a href="/resume.pdf" download className="underline">
             resume <DownloadIcon className="inline-block h-[0.8rem] w-[0.8rem]" />
           </a>{' '}
