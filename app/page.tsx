@@ -7,7 +7,7 @@ export default async function Index() {
         <ThemeToggle />
       </div>
       <h1 className="mt-14 text-4xl font-bold tracking-tight">Mason Smith</h1>
-      <article className="text-sm">
+      <article>
         <p className="mt-4">
           I am a technical lead engineer at Bamboo Rose. My inadvertent specialty is rearchitecting legacy codebases
           into modern, maintainable, and scalable web and cross-platform applications.
