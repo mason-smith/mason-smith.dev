@@ -2,7 +2,7 @@ import { type ReactNode } from 'react';
 import { Inter } from 'next/font/google';
 
 // project dependencies
-import { SiteFooter, ThemeProvider } from '@masonsmith/components';
+import { SiteFooter, SiteHeader, ThemeProvider } from '@masonsmith/components';
 // local dependencies
 import './global.css';
 import { cn } from '@masonsmith/utils';
@@ -56,6 +56,7 @@ export default function RootLayout({ children }: { children: ReactNode }) {
       <body>
         <ThemeProvider attribute="class" defaultTheme="system" enableSystem disableTransitionOnChange>
           <div className="relative flex min-h-screen flex-col">
+            <SiteHeader />
             <div className="flex-1">{children}</div>
             <SiteFooter />
           </div>
