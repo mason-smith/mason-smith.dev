@@ -54,7 +54,7 @@
       "executor": "@nx/eslint:lint",
       "outputs": ["{options.outputFile}"],
       "options": {
-        "lintFilePatterns": ["./src/**/*.{ts,tsx,js,jsx}"]
+        "lintFilePatterns": ["./app/**/*.{ts,tsx,js,jsx}"]
       }
     }
   },
