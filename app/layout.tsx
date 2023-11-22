@@ -2,9 +2,10 @@ import { type ReactNode } from 'react';
 import { Inter } from 'next/font/google';
 
 // project dependencies
-import { ThemeProvider } from '@masonsmith/components';
+import { SiteFooter, ThemeProvider } from '@masonsmith/components';
 // local dependencies
 import './global.css';
+import { cn } from '@masonsmith/utils';
 
 export const metadata = {
   title: 'Home | Mason Smith',
@@ -47,10 +48,17 @@ const inter = Inter({
 
 export default function RootLayout({ children }: { children: ReactNode }) {
   return (
-    <html lang="en" className={`${inter.className} antialiased`} suppressHydrationWarning>
+    <html
+      lang="en"
+      className={cn('min-h-screen bg-background font-sans antialiased', inter.className)}
+      suppressHydrationWarning
+    >
       <body>
         <ThemeProvider attribute="class" defaultTheme="system" enableSystem disableTransitionOnChange>
-          {children}
+          <div className="relative flex min-h-screen flex-col">
+            <div className="flex-1">{children}</div>
+            <SiteFooter />
+          </div>
         </ThemeProvider>
       </body>
     </html>
