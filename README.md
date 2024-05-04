@@ -1,3 +1,5 @@
+[![🎭 End to End Tests](https://github.com/mason-smith/mason-smith.dev/actions/workflows/e2e.yml/badge.svg)](https://github.com/mason-smith/mason-smith.dev/actions/workflows/e2e.yml)
+
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
 ## Getting Started
