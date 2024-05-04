@@ -2,7 +2,7 @@ import test, { expect } from '@playwright/test';
 
 test.describe('Main app flow', () => {
   test('should have title', async ({ baseURL, page }) => {
-    page.goto(baseURL!);
+    page.goto(baseURL ?? (process.env['BASE_URL'] || 'http://localhost:3000'));
 
     await expect(page.getByRole('heading', { name: 'Mason Smith' })).toBeVisible();
 
