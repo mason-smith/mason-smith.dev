@@ -2,10 +2,12 @@ import { type ReactNode } from 'react';
 import { Inter } from 'next/font/google';
 
 // project dependencies
-import { SiteFooter, SiteHeader, ThemeProvider } from '@masonsmith/components';
+import { ThemeProvider } from '@/components/lib/theme-provider';
+import { SiteHeader } from '@/components/lib/site-header';
+import { SiteFooter } from '@/components/lib/site-footer';
 // local dependencies
 import './global.css';
-import { cn } from '@masonsmith/utils';
+import { cn } from '@/utils/cn';
 
 export const metadata = {
   title: 'Home | Mason Smith',

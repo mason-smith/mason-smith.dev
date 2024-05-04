@@ -4,7 +4,7 @@ import { type ComponentPropsWithoutRef, type ElementRef, type HTMLAttributes, fo
 import * as DropdownMenuPrimitive from '@radix-ui/react-dropdown-menu';
 import { CheckIcon, ChevronRightIcon, DotFilledIcon } from '@radix-ui/react-icons';
 
-import { cn } from '@masonsmith/utils';
+import { cn } from '@/utils/cn';
 
 const DropdownMenu = DropdownMenuPrimitive.Root;
 
