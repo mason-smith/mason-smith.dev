@@ -9,7 +9,7 @@
     "start": "npx next start",
     "e2e": "npx playwright test",
     "lint": "npx next lint",
-    "format": "npx prettier . --format",
+    "format": "npx prettier . --write",
     "validate:full": "run-s lint format build",
     "prepare": "npx husky install"
   },

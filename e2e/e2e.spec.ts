@@ -3,6 +3,8 @@ import test, { expect } from '@playwright/test';
 test.describe('Main app flow', () => {
   test('should have title', async ({ baseURL, page }) => {
     page.goto(baseURL ?? (process.env['BASE_URL'] || 'http://localhost:3000'));
+    console.log('baseURL', baseURL);
+    console.log('process.env[BASE_URL]', process.env['BASE_URL']);
 
     await expect(page.getByRole('heading', { name: 'Mason Smith' })).toBeVisible();
 
