@@ -12,7 +12,7 @@ export function HeaderFooterContent() {
         <Link href="/" aria-label="Home page">
           <HomeIcon className="h-[1.2rem] w-[1.2rem]" />
         </Link>
-        <Link href="/posts" aria-label="View blog-style posts" className="hover:underline">
+        <Link href="/posts" aria-label="View posts" className="hover:underline">
           Posts
         </Link>
         <Link href="/about" aria-label="More details about me" className="hover:underline">

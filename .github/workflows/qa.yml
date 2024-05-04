@@ -1,0 +1,39 @@
+name: 🔍 QA
+on:
+  push:
+    branches:
+      - develop
+      - main
+  pull_request:
+
+concurrency:
+  group: ${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
+
+permissions:
+  actions: read
+  contents: read
+
+jobs:
+  main:
+    name: 🔍 Run QA (Lint, test, build)
+    runs-on: ubuntu-latest
+    steps:
+      - name: ⬇️ Checkout repo
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - name: ⎔ Setup node
+        uses: actions/setup-node@v3
+        with:
+          cache: npm
+          cache-dependency-path: ./package.json
+          node-version: lts/*
+      - name: 📥 Install deps
+        run: npm ci
+
+      - name: 💅 Run formatter
+        run: npx prettier . --check
+
+      - name: 🧹 Lint, 🧪 test, 🏗️ build
+        run: npm run validate:full
