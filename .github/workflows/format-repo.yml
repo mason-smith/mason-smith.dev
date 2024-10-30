@@ -17,18 +17,23 @@ jobs:
           fetch-depth: 0
           token: ${{ secrets.GITHUB_TOKEN }}
 
+      - name: 📦 Install pnpm
+        uses: pnpm/action-setup@v4
+        with:
+          run_install: false
+
       - name: ⎔ Setup node
         uses: actions/setup-node@v3
         with:
-          cache: npm
+          cache: pnpm
           cache-dependency-path: ./package.json
           node-version: lts/*
 
       - name: 📥 Install deps
-        run: npm install
+        run: pnpm install
 
       - name: 👔 Format
-        run: npm run format
+        run: pnpm check
 
       - name: 💪 Commit
         run: |
