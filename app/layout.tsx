@@ -1,12 +1,13 @@
-import { type ReactNode } from 'react';
 import { Inter } from 'next/font/google';
+import type { PropsWithChildren } from 'react';
 
+import { SiteFooter } from '@/components/lib/site-footer';
+import { SiteHeader } from '@/components/lib/site-header';
 // project dependencies
 import { ThemeProvider } from '@/components/lib/theme-provider';
-import { SiteHeader } from '@/components/lib/site-header';
-import { SiteFooter } from '@/components/lib/site-footer';
 // local dependencies
-import './global.css';
+import './css/reset.css';
+import './css/global.css';
 import { cn } from '@/utils/cn';
 
 export const metadata = {
@@ -48,7 +49,7 @@ const inter = Inter({
   display: 'swap',
 });
 
-export default function RootLayout({ children }: { children: ReactNode }) {
+export default function RootLayout({ children }: PropsWithChildren) {
   return (
     <html
       lang="en"
