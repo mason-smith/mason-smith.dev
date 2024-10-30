@@ -1,5 +1,5 @@
-import Link from 'next/link';
 import { DownloadIcon, GitHubLogoIcon, HomeIcon } from '@radix-ui/react-icons';
+import Link from 'next/link';
 
 // local dependencies
 import { Button } from '../ui/button';
