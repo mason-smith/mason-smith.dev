@@ -8,9 +8,8 @@
     "build": "npx next build",
     "start": "npx next start",
     "e2e": "npx playwright test",
-    "lint": "npx next lint",
-    "format": "npx prettier . --write",
-    "validate:full": "run-s lint format build",
+    "check": "pnpm biome check --write ./app ./components",
+    "validate:full": "run-s check build",
     "prepare": "npx husky install"
   },
   "dependencies": {
