@@ -1,8 +1,9 @@
 {
   "name": "mason-smith",
-  "version": "2.0.0",
+  "version": "2.1.0",
   "private": true,
   "type": "module",
+  "packageManager": "pnpm@9.11.0",
   "scripts": {
     "dev": "npx next dev",
     "build": "npx next build",
