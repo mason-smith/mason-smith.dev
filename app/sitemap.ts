@@ -1,16 +1,15 @@
-import { getBlogPosts } from "@/utils/posts";
-
-export const baseUrl = "https://portfolio-post-starter.vercel.app";
+import { siteConfig } from '@/config/site-config';
+import { getBlogPosts } from '@/utils/posts';
 
 export default async function sitemap() {
   const posts = getBlogPosts().map((post) => ({
-    url: `${baseUrl}/posts/${post.slug}`,
+    url: `${siteConfig.baseUrl}/blog/${post.slug}`,
     lastModified: post.metadata.datePublished,
   }));
 
-  const routes = ["", "/posts"].map((route) => ({
-    url: `${baseUrl}${route}`,
-    lastModified: new Date().toISOString().split("T")[0],
+  const routes = ['', '/blog'].map((route) => ({
+    url: `${siteConfig.baseUrl}${route}`,
+    lastModified: new Date().toISOString().split('T')[0],
   }));
 
   return [...routes, ...posts];
