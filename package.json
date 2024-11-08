@@ -9,7 +9,7 @@
     "build": "npx next build",
     "start": "npx next start",
     "e2e": "npx playwright test",
-    "check": "pnpm biome check --write ./app ./components ./utils",
+    "check": "pnpm biome check --write ./app ./components ./utils ./e2e",
     "validate:full": "run-s check build",
     "prepare": "npx husky install"
   },
