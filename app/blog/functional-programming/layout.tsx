@@ -1,7 +1,7 @@
-import type { ReactNode } from "react";
+import type { ReactNode } from 'react';
 
-import { getBlogPosts } from "@/utils/posts";
-import { BlogHeader } from "@/components/blog-header";
+import { BlogHeader } from '@/components/blog-header';
+import { getBlogPosts } from '@/utils/posts';
 
 type Props = {
   children: ReactNode;
