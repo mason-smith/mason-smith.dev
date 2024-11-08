@@ -1,10 +1,10 @@
-import { siteConfig } from "@/config/site-config";
+import { siteConfig } from '@/config/site-config';
 
 export default function robots() {
   return {
     rules: [
       {
-        userAgent: "*",
+        userAgent: '*',
       },
     ],
     sitemap: `${siteConfig.baseUrl}/sitemap.xml`,
