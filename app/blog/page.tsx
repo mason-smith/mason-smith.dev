@@ -4,11 +4,9 @@ export const metadata = {
 
 export default function Posts() {
   return (
-    <main className="p-4 lg:container lg:mx-auto">
-      <h1 className="mt-14 text-4xl font-bold tracking-tight">Posts and musings</h1>
-      <section>
-        <p className="mt-4">Coming soon. But probably not, actually.</p>
-      </section>
-    </main>
+    <section>
+      <h1 className="mb-8 text-2xl font-semibold tracking-tighter">Things I think about</h1>
+      <p className="mb-4">Coming soon. But probably not, actually.</p>
+    </section>
   );
 }
