@@ -1,16 +1,16 @@
-import createMDX from "@next/mdx";
-import remarkFrontmatter from "remark-frontmatter";
-import remarkMdxFrontmatter from "remark-mdx-frontmatter";
-import remarkGfm from "remark-gfm";
-import rehypeStarryNight from "rehype-starry-night";
+import createMDX from '@next/mdx';
+import rehypeStarryNight from 'rehype-starry-night';
+import remarkFrontmatter from 'remark-frontmatter';
+import remarkGfm from 'remark-gfm';
+import remarkMdxFrontmatter from 'remark-mdx-frontmatter';
 
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   images: {
     remotePatterns: [
       {
-        protocol: "https",
-        hostname: "images.unsplash.com",
+        protocol: 'https',
+        hostname: 'images.unsplash.com',
       },
     ],
   },
@@ -19,7 +19,7 @@ const nextConfig = {
       fullUrl: true,
     },
   },
-  pageExtensions: ["js", "jsx", "md", "mdx", "ts", "tsx"],
+  pageExtensions: ['js', 'jsx', 'md', 'mdx', 'ts', 'tsx'],
 };
 
 const withMDX = createMDX({
