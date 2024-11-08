@@ -1,6 +1,6 @@
 export const siteConfig = {
-  baseUrl: 'https://stack-fitness.vercel.app',
-  name: 'Mason Smith',
+  baseUrl: "https://www.masonsmith.dev",
+  name: "Mason Smith",
   description: "Mason Smith's personal website",
 };
 
