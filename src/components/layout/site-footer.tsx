@@ -1,6 +1,6 @@
 import { personal } from "@/data/personal"
 
-const CURRENT_YEAR = new Date().getFullYear()
+const CURRENT_YEAR = "2026"
 
 export function SiteFooter() {
 	return (
