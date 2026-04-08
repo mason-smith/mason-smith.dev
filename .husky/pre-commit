@@ -1,2 +1,1 @@
-pnpm biome check --write $(git diff --cached --name-only --diff-filter=ACMR | sed 's| |\\ |g')
-pnpm build
+pnpm exec biome check --write --staged && pnpm typecheck
