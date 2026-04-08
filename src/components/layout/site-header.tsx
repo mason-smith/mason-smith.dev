@@ -18,7 +18,7 @@ export function SiteHeader() {
 						<Link
 							key={item.label}
 							to={item.href}
-							className="hidden text-sm text-muted-foreground transition-colors hover:text-foreground focus-visible:text-foreground focus-visible:outline-none sm:inline"
+							className="text-sm text-muted-foreground transition-colors hover:text-foreground focus-visible:text-foreground focus-visible:outline-none"
 							activeProps={{ className: "text-foreground" }}
 						>
 							{item.label}
