@@ -12,7 +12,7 @@ export const posts: Array<Post> = [
 		title: "When managers fail developers (six years later)",
 		summary:
 			"I wrote about bad management in 2020. I still agree with most of it, but I understand now what it actually takes to make good management work.",
-		datePublished: "2026-04-08",
+		datePublished: "2026-04-07",
 		category: "leadership",
 	},
 	{

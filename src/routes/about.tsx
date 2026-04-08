@@ -40,8 +40,22 @@ function AboutPage() {
 					manager.
 				</p>
 				<p>
-					I pride myself on my leadership skills and ability to mentor junior engineers and create psychologically safe
-					environments for my team to excel both professionally and interpersonally.
+					I care a lot about how teams work. The best engineering I've done has always come from teams where people felt
+					safe to be honest, ask questions, and push back. I try to build that kind of environment for the people I
+					manage.
+				</p>
+				<p>
+					Lately I've been leaning away from the corporate world and putting energy back into{" "}
+					<a
+						href={personal.company.url}
+						target="_blank"
+						rel="noopener noreferrer"
+						className="text-foreground underline underline-offset-4 transition-colors hover:text-muted-foreground"
+					>
+						{personal.company.name}
+					</a>
+					, my consultancy. I like building things on my own terms and working directly with people who care about
+					quality.
 				</p>
 				<p>
 					When I am not working, I enjoy spending time with my family, playing video games, and learning new things. I
