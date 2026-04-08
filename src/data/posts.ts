@@ -8,6 +8,14 @@ export type Post = {
 
 export const posts: Array<Post> = [
 	{
+		slug: "ownership-discipline-cohesion",
+		title: "Ownership, discipline, cohesion",
+		summary:
+			"What happens when you care about the standard in an environment that doesn't ask you to. Three lessons from a job I didn't love.",
+		datePublished: "2026-04-08",
+		category: "leadership",
+	},
+	{
 		slug: "when-managers-fail-developers-six-years-later",
 		title: "When managers fail developers (six years later)",
 		summary:
