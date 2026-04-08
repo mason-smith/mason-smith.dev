@@ -19,7 +19,7 @@ export const posts: Array<Post> = [
 		slug: "functional-programming-in-javascript",
 		title: "Functional Programming in JavaScript",
 		summary:
-			"A high-level overview of pure functions, higher-order functions, and immutability — and why they changed the way I write code.",
+			"A high-level overview of pure functions, higher-order functions, and immutability, and why they changed the way I write code.",
 		datePublished: "2019-07-24",
 		category: "engineering",
 	},
