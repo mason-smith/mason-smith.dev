@@ -8,6 +8,14 @@ export type Post = {
 
 export const posts: Array<Post> = [
 	{
+		slug: "when-managers-fail-developers-six-years-later",
+		title: "When managers fail developers (six years later)",
+		summary:
+			"I wrote about bad management in 2020. I still agree with most of it, but I understand now what it actually takes to make good management work.",
+		datePublished: "2026-04-08",
+		category: "leadership",
+	},
+	{
 		slug: "when-managers-fail-developers",
 		title: "When managers fail developers",
 		summary:
@@ -29,9 +37,7 @@ export function getPostBySlug(slug: string): Post | undefined {
 	return posts.find((p) => p.slug === slug)
 }
 
-const sortedPosts = [...posts].sort(
-	(a, b) => new Date(b.datePublished).getTime() - new Date(a.datePublished).getTime(),
-)
+const sortedPosts = [...posts].sort((a, b) => new Date(b.datePublished).getTime() - new Date(a.datePublished).getTime())
 
 export function getSortedPosts(): Array<Post> {
 	return sortedPosts
