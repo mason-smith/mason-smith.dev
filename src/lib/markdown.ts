@@ -12,26 +12,26 @@ export type MarkdownResult = {
 	html: string
 }
 
-export async function processMarkdown(content: string): Promise<MarkdownResult> {
-	const result = await unified()
-		.use(remarkParse)
-		.use(remarkGfm)
-		.use(remarkRehype, { allowDangerousHtml: true })
-		.use(rehypeRaw)
-		.use(rehypeSlug)
-		.use(rehypeAutolinkHeadings, {
-			behavior: "wrap",
-			properties: { className: ["anchor"] },
-		})
-		.use(rehypePrettyCode, {
-			theme: {
-				dark: "github-dark-default",
-				light: "github-light-default",
-			},
-			keepBackground: false,
-		})
-		.use(rehypeStringify)
-		.process(content)
+const pipeline = unified()
+	.use(remarkParse)
+	.use(remarkGfm)
+	.use(remarkRehype, { allowDangerousHtml: true })
+	.use(rehypeRaw)
+	.use(rehypeSlug)
+	.use(rehypeAutolinkHeadings, {
+		behavior: "wrap",
+		properties: { className: ["anchor"] },
+	})
+	.use(rehypePrettyCode, {
+		theme: {
+			dark: "github-dark-default",
+			light: "github-light-default",
+		},
+		keepBackground: false,
+	})
+	.use(rehypeStringify)
 
+export async function processMarkdown(content: string): Promise<MarkdownResult> {
+	const result = await pipeline.process(content)
 	return { html: String(result) }
 }

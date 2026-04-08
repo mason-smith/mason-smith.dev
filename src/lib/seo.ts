@@ -1,8 +1,7 @@
-const SITE_URL = "https://masonsmith.dev"
-const SITE_NAME = "Mason Smith"
-const DEFAULT_TITLE = "Mason Smith"
-const DEFAULT_DESCRIPTION =
-	"Software engineer and engineering manager. I build things with care, lead teams that ship with confidence, and write about what I learn along the way."
+import { personal } from "@/data/personal"
+
+const DEFAULT_TITLE = personal.name
+const DEFAULT_DESCRIPTION = personal.description
 
 type SeoOptions = {
 	title?: string
@@ -12,23 +11,21 @@ type SeoOptions = {
 }
 
 export function createSeoMeta({ title, description, path = "/", type = "website" }: SeoOptions = {}) {
-	const pageTitle = title ? `${title} | ${SITE_NAME}` : DEFAULT_TITLE
+	const pageTitle = title ? `${title} | ${personal.name}` : DEFAULT_TITLE
 	const pageDescription = description || DEFAULT_DESCRIPTION
-	const canonicalUrl = `${SITE_URL}${path}`
+	const canonicalUrl = `${personal.site}${path}`
 
 	return [
 		{ title: pageTitle },
 		{ name: "description", content: pageDescription },
 
-		// Open Graph
 		{ property: "og:type", content: type },
 		{ property: "og:title", content: pageTitle },
 		{ property: "og:description", content: pageDescription },
 		{ property: "og:url", content: canonicalUrl },
-		{ property: "og:site_name", content: SITE_NAME },
+		{ property: "og:site_name", content: personal.name },
 		{ property: "og:locale", content: "en_US" },
 
-		// Twitter
 		{ name: "twitter:card", content: "summary" },
 		{ name: "twitter:title", content: pageTitle },
 		{ name: "twitter:description", content: pageDescription },
@@ -36,7 +33,7 @@ export function createSeoMeta({ title, description, path = "/", type = "website"
 }
 
 export function createCanonicalLink(path = "/") {
-	return { rel: "canonical", href: `${SITE_URL}${path}` }
+	return { rel: "canonical", href: `${personal.site}${path}` }
 }
 
 export function createJsonLd() {
@@ -45,12 +42,12 @@ export function createJsonLd() {
 		"@graph": [
 			{
 				"@type": "Person",
-				"@id": `${SITE_URL}/#person`,
-				name: SITE_NAME,
-				url: SITE_URL,
+				"@id": `${personal.site}/#person`,
+				name: personal.name,
+				url: personal.site,
 				jobTitle: "Engineering Manager",
 				description: DEFAULT_DESCRIPTION,
-				sameAs: ["https://github.com/mason-smith", "https://linkedin.com/in/masonsmith", "https://solutionops.com"],
+				sameAs: [personal.github, personal.linkedin, personal.company.url],
 				worksFor: {
 					"@type": "Organization",
 					name: "Bamboo Rose",
@@ -66,10 +63,10 @@ export function createJsonLd() {
 			},
 			{
 				"@type": "WebSite",
-				"@id": `${SITE_URL}/#website`,
-				url: SITE_URL,
-				name: SITE_NAME,
-				author: { "@id": `${SITE_URL}/#person` },
+				"@id": `${personal.site}/#website`,
+				url: personal.site,
+				name: personal.name,
+				author: { "@id": `${personal.site}/#person` },
 			},
 		],
 	}

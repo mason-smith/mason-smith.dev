@@ -7,7 +7,7 @@ type ThemeProviderState = {
 	setTheme: (theme: Theme) => void
 }
 
-const STORAGE_KEY = "masonsmith-theme"
+export const THEME_STORAGE_KEY = "masonsmith-theme"
 
 const ThemeProviderContext = createContext<ThemeProviderState>({
 	theme: "system",
@@ -38,7 +38,7 @@ export function ThemeProvider({
 	}, [])
 
 	useEffect(() => {
-		const stored = localStorage.getItem(STORAGE_KEY) as Theme | null
+		const stored = localStorage.getItem(THEME_STORAGE_KEY) as Theme | null
 		if (stored && stored !== defaultTheme) {
 			setThemeState(stored)
 			applyTheme(stored)
@@ -46,10 +46,6 @@ export function ThemeProvider({
 			applyTheme(defaultTheme)
 		}
 	}, [defaultTheme, applyTheme])
-
-	useEffect(() => {
-		applyTheme(theme)
-	}, [theme, applyTheme])
 
 	useEffect(() => {
 		const media = window.matchMedia("(prefers-color-scheme: dark)")
@@ -60,10 +56,14 @@ export function ThemeProvider({
 		return () => media.removeEventListener("change", handler)
 	}, [theme, applyTheme])
 
-	const setTheme = useCallback((t: Theme) => {
-		localStorage.setItem(STORAGE_KEY, t)
-		setThemeState(t)
-	}, [])
+	const setTheme = useCallback(
+		(t: Theme) => {
+			localStorage.setItem(THEME_STORAGE_KEY, t)
+			setThemeState(t)
+			applyTheme(t)
+		},
+		[applyTheme],
+	)
 
 	return <ThemeProviderContext value={{ theme, setTheme }}>{children}</ThemeProviderContext>
 }

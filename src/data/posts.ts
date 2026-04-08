@@ -29,6 +29,10 @@ export function getPostBySlug(slug: string): Post | undefined {
 	return posts.find((p) => p.slug === slug)
 }
 
+const sortedPosts = [...posts].sort(
+	(a, b) => new Date(b.datePublished).getTime() - new Date(a.datePublished).getTime(),
+)
+
 export function getSortedPosts(): Array<Post> {
-	return [...posts].sort((a, b) => new Date(b.datePublished).getTime() - new Date(a.datePublished).getTime())
+	return sortedPosts
 }

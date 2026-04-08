@@ -1,12 +1,12 @@
 import { createRootRoute, HeadContent, Link, Outlet, Scripts } from "@tanstack/react-router"
 import { SiteFooter } from "@/components/layout/site-footer"
 import { SiteHeader } from "@/components/layout/site-header"
-import { ThemeProvider } from "@/components/theme-provider"
+import { THEME_STORAGE_KEY, ThemeProvider } from "@/components/theme-provider"
 import { createCanonicalLink, createJsonLd, createSeoMeta } from "@/lib/seo"
 
 import appCss from "../styles.css?url"
 
-const themeScript = `(function(){var t=localStorage.getItem("masonsmith-theme")||"system";var r=t;if(t==="system"){r=window.matchMedia("(prefers-color-scheme: dark)").matches?"dark":"light"}document.documentElement.classList.add(r)})();`
+const themeScript = `(function(){var t=localStorage.getItem("${THEME_STORAGE_KEY}")||"system";var r=t;if(t==="system"){r=window.matchMedia("(prefers-color-scheme: dark)").matches?"dark":"light"}document.documentElement.classList.add(r)})();`
 
 const jsonLd = JSON.stringify(createJsonLd())
 
