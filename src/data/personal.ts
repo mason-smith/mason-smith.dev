@@ -13,8 +13,9 @@ export const personal = {
 	},
 } as const
 
-export const navigation = [
+export const internalNav = [
 	{ label: "Blog", href: "/blog" },
 	{ label: "About", href: "/about" },
-	{ label: "GitHub", href: personal.github, external: true },
 ] as const
+
+export const externalNav = [{ label: "GitHub", href: personal.github }] as const
