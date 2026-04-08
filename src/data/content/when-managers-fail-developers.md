@@ -1,4 +1,4 @@
-export const content = `This might not be the best thing to say out loud, but I sometimes have issues with authority. I like to own my own processes, manage my own time, and do things the way they work for me. That's not to say I'm a lone wolf or cowboy by any means. I thrive in teams. My favorite past time is advocating for my fellow developers and debating ways in which we can improve ourselves and our software. I wouldn't be where I am today without having been a part of fantastic and largely successful teams.
+This might not be the best thing to say out loud, but I sometimes have issues with authority. I like to own my own processes, manage my own time, and do things the way they work for me. That's not to say I'm a lone wolf or cowboy by any means. I thrive in teams. My favorite past time is advocating for my fellow developers and debating ways in which we can improve ourselves and our software. I wouldn't be where I am today without having been a part of fantastic and largely successful teams.
 
 Perhaps I'd better say I have issues with incompetent and micromanagerial authority.
 
@@ -45,4 +45,4 @@ After listening to developers, traditional management needs to throw out the fol
 - **Tasking developers with creating Detailed Estimates**
 - **Work Breakdown Structure** - Again, this is great for known duration tasks, not software projects
 - **Arbitrary Due Dates** calculated from flawed detailed estimates
-- **Blindly accepting scope**`
+- **Blindly accepting scope**

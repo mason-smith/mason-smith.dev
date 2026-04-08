@@ -17,9 +17,7 @@ export function BlogList() {
 						className="group flex items-baseline justify-between gap-4 py-4 no-underline"
 					>
 						<div className="flex items-baseline gap-3">
-							<span className="text-lg font-medium tracking-tight group-hover:text-foreground">
-								{post.title}
-							</span>
+							<span className="text-lg font-medium tracking-tight group-hover:text-foreground">{post.title}</span>
 							<span className="hidden text-sm text-muted-foreground sm:inline">{post.summary}</span>
 						</div>
 						<div className="flex shrink-0 items-center gap-3">

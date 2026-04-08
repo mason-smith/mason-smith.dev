@@ -1,5 +1,5 @@
 import { ArrowRightIcon } from "@phosphor-icons/react"
-import { Link, createFileRoute } from "@tanstack/react-router"
+import { createFileRoute, Link } from "@tanstack/react-router"
 import { getSortedPosts } from "@/data/posts"
 import { createCanonicalLink, createSeoMeta } from "@/lib/seo"
 
@@ -30,9 +30,7 @@ function BlogIndexPage() {
 						className="group flex flex-col gap-1 py-5 no-underline sm:flex-row sm:items-baseline sm:justify-between sm:gap-4"
 					>
 						<div className="space-y-1">
-							<span className="text-lg font-medium tracking-tight group-hover:text-foreground">
-								{post.title}
-							</span>
+							<span className="text-lg font-medium tracking-tight group-hover:text-foreground">{post.title}</span>
 							<p className="text-sm text-muted-foreground">{post.summary}</p>
 						</div>
 						<div className="flex shrink-0 items-center gap-3">
