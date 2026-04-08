@@ -1,7 +1,9 @@
-import { createFileRoute } from "@tanstack/react-router"
+import { Outlet, createFileRoute } from "@tanstack/react-router"
 
-export const Route = createFileRoute("/blog")({ component: BlogPage })
+export const Route = createFileRoute("/blog")({
+	component: BlogLayout,
+})
 
-function BlogPage() {
-	return <div>Blog</div>
+function BlogLayout() {
+	return <Outlet />
 }

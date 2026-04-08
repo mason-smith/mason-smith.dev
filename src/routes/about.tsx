@@ -1,6 +1,6 @@
 import { createFileRoute } from "@tanstack/react-router"
-import { createCanonicalLink, createSeoMeta } from "@/lib/seo"
 import { personal } from "@/data/personal"
+import { createCanonicalLink, createSeoMeta } from "@/lib/seo"
 
 export const Route = createFileRoute("/about")({
 	component: AboutPage,
@@ -30,14 +30,14 @@ function AboutPage() {
 					>
 						{personal.company.name}
 					</a>{" "}
-					to operate independently since I frankly had no idea what I was doing and felt completely in over my head
-					when I applied for my first real position.
+					to operate independently since I frankly had no idea what I was doing and felt completely in over my head when
+					I applied for my first real position.
 				</p>
 				<p>
-					In 2018, I had burned myself out as an independent contractor and was looking for a change. I moved around
-					the country a bit and eventually landed in Colorado where I was hired as a senior engineer at BackbonePLM.
-					They were acquired by Bamboo Rose in March 2023. I have been working nomadically between Seattle, WA and
-					Louisville, KY ever since, and have been promoted to engineering manager.
+					In 2018, I had burned myself out as an independent contractor and was looking for a change. I moved around the
+					country a bit and eventually landed in Colorado where I was hired as a senior engineer at BackbonePLM. They
+					were acquired by Bamboo Rose in March 2023. I am now based in Kentucky and have been promoted to engineering
+					manager.
 				</p>
 				<p>
 					I pride myself on my leadership skills and ability to mentor junior engineers and create psychologically safe

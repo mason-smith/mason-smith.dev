@@ -2,7 +2,7 @@ export const personal = {
 	name: "Mason Smith",
 	tagline: "Engineer, manager, maker.",
 	description:
-		"I'm Mason, a software engineer and engineering manager based between Seattle and Louisville. I build things with care, lead teams that ship with confidence, and write about what I learn along the way.",
+		"I'm Mason, a software engineer and engineering manager. I came up building software in Silicon Valley and Seattle, and now call Kentucky home. I build things with care, lead teams that ship with confidence, and write about what I learn along the way.",
 	email: "mason.smith@solutionops.com",
 	github: "https://github.com/mason-smith",
 	linkedin: "https://linkedin.com/in/masonsmith",
