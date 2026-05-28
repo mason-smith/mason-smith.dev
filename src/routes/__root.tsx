@@ -2,7 +2,7 @@ import { createRootRoute, HeadContent, Link, Outlet, Scripts } from "@tanstack/r
 import { SiteFooter } from "@/components/layout/site-footer"
 import { SiteHeader } from "@/components/layout/site-header"
 import { THEME_STORAGE_KEY, ThemeProvider } from "@/components/theme-provider"
-import { createCanonicalLink, createJsonLd, createSeoMeta } from "@/lib/seo"
+import { createJsonLd, createSeoMeta } from "@/lib/seo"
 
 import appCss from "../styles.css?url"
 
@@ -20,7 +20,6 @@ export const Route = createRootRoute({
 		links: [
 			{ rel: "stylesheet", href: appCss },
 			{ rel: "icon", type: "image/svg+xml", href: "/favicon.svg" },
-			createCanonicalLink("/"),
 		],
 		scripts: [{ children: themeScript }, { type: "application/ld+json", children: jsonLd }],
 	}),
