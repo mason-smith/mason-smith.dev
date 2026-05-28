@@ -27,18 +27,17 @@ export const Route = createFileRoute("/blog/$slug")({
 		const { html } = await processMarkdown(raw)
 		return { post, html }
 	},
-	head: ({ loaderData }) => {
-		const post = loaderData?.post
+	head: ({ params }) => {
+		const post = getPostBySlug(params.slug)
+		if (!post) return { meta: [], links: [] }
 		return {
-			meta: post
-				? createSeoMeta({
-						title: post.title,
-						description: post.summary,
-						path: `/blog/${post.slug}`,
-						type: "article",
-					})
-				: [],
-			links: post ? [createCanonicalLink(`/blog/${post.slug}`)] : [],
+			meta: createSeoMeta({
+				title: post.title,
+				description: post.summary,
+				path: `/blog/${post.slug}`,
+				type: "article",
+			}),
+			links: [createCanonicalLink(`/blog/${post.slug}`)],
 		}
 	},
 })
