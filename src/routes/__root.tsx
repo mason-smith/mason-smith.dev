@@ -10,6 +10,10 @@ const themeScript = `(function(){var t=localStorage.getItem("${THEME_STORAGE_KEY
 
 const jsonLd = JSON.stringify(createJsonLd())
 
+// Cloudflare Web Analytics beacon token (public, domain-locked). `spa: true`
+// tracks pathname changes from TanStack Router client-side navigation.
+const CF_BEACON_TOKEN = "2ebaa3b0f6f141d9a1b0b631494f2139"
+
 export const Route = createRootRoute({
 	head: () => ({
 		meta: [
@@ -42,6 +46,13 @@ function RootDocument({ children }: { children: React.ReactNode }) {
 					Skip to content
 				</a>
 				{children}
+				{import.meta.env.PROD && (
+					<script
+						type="module"
+						src="https://static.cloudflareinsights.com/beacon.min.js"
+						data-cf-beacon={JSON.stringify({ token: CF_BEACON_TOKEN, spa: true })}
+					/>
+				)}
 				<Scripts />
 			</body>
 		</html>
