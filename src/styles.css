@@ -134,19 +134,19 @@
 	@apply bg-primary text-primary-foreground;
 }
 
-/* rehype-pretty-code: dual theme */
-[data-rehype-pretty-code-figure] span {
+/* shiki (@shikijs/rehype): dual theme via CSS variables */
+.shiki span {
 	color: var(--shiki-light);
 }
-.dark [data-rehype-pretty-code-figure] span {
+.dark .shiki span {
 	color: var(--shiki-dark);
 }
 
-[data-rehype-pretty-code-figure] pre {
+.shiki {
 	@apply overflow-x-auto rounded-lg border border-border/40 px-4 py-3 text-sm leading-relaxed;
 	background-color: var(--shiki-light-bg);
 }
-.dark [data-rehype-pretty-code-figure] pre {
+.dark .shiki {
 	background-color: var(--shiki-dark-bg);
 }
 
@@ -156,7 +156,7 @@
 	font-family: "Geist Mono", ui-monospace, monospace;
 }
 
-[data-rehype-pretty-code-figure] code {
+.shiki code {
 	font-family: "Geist Mono", ui-monospace, monospace;
 }
 
