@@ -2,6 +2,7 @@
 	"name": "masonsmith",
 	"private": true,
 	"type": "module",
+	"packageManager": "pnpm@10.19.0",
 	"scripts": {
 		"dev": "vite dev --port 8080",
 		"prebuild": "node scripts/generate-sitemap.mjs",
